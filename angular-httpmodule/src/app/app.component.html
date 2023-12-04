@@ -1,0 +1,23 @@
+<h2 *ngIf="isVisible">안녕하세요</h2>
+<button (click)="toggle()"></button>
+
+<!-- object를 json형태로 표현 -->
+<p>{{{'name':'mark'} |json }}</p>
+<p>{{ 'qkrmekem' | slice:0:1 }}</p>
+<!-- 문자열이나 배열을 잘라서 표현 -->
+<p>{{ 'qkrmekem' | slice:0:1 }}</p>
+<p>{{ ['qkrmekem','asdf'] | slice:0:1 }}</p>
+<!-- upper/lower 케이스로 표현 -->
+<p>{{ 'qkrmekem' | uppercase }}</p>
+<p>{{ 'qkrmekem' | lowercase }}</p>
+<p>{{ 'qkrmekem' | uppercase | lowercase }}</p>
+<p>{{ 123456789012 | date:'yyyy년mm월dd일'}}</p>
+<!-- Observable 객체를 화면에 그대로 뿌릴 때 사용 -->
+<!-- <p>{{ data:async }}</p> -->
+<!--  -->
+
+<div *ngFor="let user of users">
+  <h2>{{user.login}}</h2>
+  <img [src]="user.avatar_url" width="200">
+</div>
+

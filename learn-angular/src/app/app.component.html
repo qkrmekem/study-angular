@@ -1,0 +1,29 @@
+
+
+<!-- <main class="main">
+      <h1>Hello, {{ title }}</h1>
+      <p>Congratulations! Your app is running. 🎉</p>
+      <app-test></app-test> -->
+      <!-- 부모에서 자식으로 데이터를 넘김 -->
+      <!-- []로 감싸서 표현하면 test=title 이런식으로 넘기는 것이고 -->
+      <!-- []로 감싸지 않으면 test="title" 이런식으로 넘기는 방식임 -->
+      <!-- <app-sample1 test="title"></app-sample1> -->
+      <!-- <app-sample1 [test]="title"></app-sample1> -->
+      <!-- (custom)="custom()" - (자식의 @Output) = "부모의 function()" -->
+      <!-- <app-sample1 *ngFor="let name of names" [test]='names' (custom)="custom()"></app-sample1>
+
+</main> -->
+<div>
+  <app-grand></app-grand>
+</div>
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+<router-outlet></router-outlet>

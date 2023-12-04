@@ -1,0 +1,13 @@
+<h1>Hello, {{ title }}</h1>
+<p>Congratulations! Your app is running. 🎉</p>
+
+<nav>
+  <!-- routerLinkActiveOptions : 경로가 정확히 일치할 때만 active 속성 적용 -->
+  <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">home</a><br>
+  <a routerLink="/about" routerLinkActive="active">about</a>
+  <a routerLink="/developer" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">developer</a>
+  <a routerLink="/developer/mark" routerLinkActive="active" >mark</a>
+</nav>
+
+<!-- 라우터 등록 -->
+<router-outlet></router-outlet>
