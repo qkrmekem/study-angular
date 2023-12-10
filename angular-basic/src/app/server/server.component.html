@@ -1,0 +1,4 @@
+<!-- ngStyle : css의 스타일 속성과 값을 매칭하여 DOM에 스타일을 적용 -->
+<!-- {스타일 속성 이름 : 속성 값} -->
+<p [ngStyle]="{backgroundColor: getColor()}"
+[ngClass]="{online: serverStatus === 'online'}">Server with ID {{serverId}} is {{serverStatus}}</p>
