@@ -13,10 +13,11 @@ export class RecipeItemComponent {
   // 부모에 이렇게 선언이 되어 있으면 [recipe]와 recipe가 매칭이되고 값으로 recipeEl이 들어옴
   @Input() recipe: Recipe;
   @Output() selectedRecipe= new EventEmitter<void>();
+  @Input() index: number;
 
   constructor(private recipeService: RecipeService){}
 
-  onSelected(){
-    this.recipeService.recipeSelected.emit(this.recipe);
-  }
+  // onSelected(){
+  //   this.recipeService.recipeSelected.next(this.recipe);
+  // }
 }
