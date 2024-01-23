@@ -3,6 +3,10 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/recipes', pathMatch: 'full' },
+  // Lazy 모듈 설정 방법
+  // 예전 문법
+  // { path: 'recipes', loadChildren: './recipes/recipes.module#RecipesModule' },
+  // 최신 문법
   { path: 'recipes', loadChildren: () => import('./recipes/recipes.module').then(m => m.RecipesModule) },
   {
     path: 'shopping-list',
