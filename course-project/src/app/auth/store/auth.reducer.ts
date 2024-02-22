@@ -10,6 +10,8 @@ const initialState: State = {
 };
 
 export function authReducer(state = initialState, action: AuthActions.AuthActions) {
+    console.log(state);
+    
     switch(action.type){
         case AuthActions.LOGIN:
             const user = new User(
