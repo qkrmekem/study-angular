@@ -12,6 +12,8 @@ import { StoreModule } from '@ngrx/store';
 import { shoppingListReducer } from './shopping-list/store/shopping-list.reducer';
 import { authReducer } from './auth/store/auth.reducer';
 import * as fromApp from './store/app.reducer';
+import { EffectsModule } from '@ngrx/effects';
+import { AuthEffects } from './auth/store/auth.effects';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent],
@@ -28,6 +30,7 @@ import * as fromApp from './store/app.reducer';
       // ActionReducerMap을 사용한 삽입
       fromApp.appReducer
     ),
+    EffectsModule.forRoot([AuthEffects]),
     SharedModule,
     CoreModule
   ],
